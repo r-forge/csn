@@ -1,0 +1,10 @@
+38e09dbed6a9c822f1622e364eeeb40e *DESCRIPTION
+3add98148adb385d7c28975dd526d90a *NAMESPACE
+6ef3cc5d846fa237d0d066c322e06920 *R/dcsn.R
+baa455ee6c8455d1e09b1466fd6c5b9c *R/loglcsn.R
+b3b278c6e953b072a3513d8fe22f274b *R/pcsn.R
+562b151f493a6f987b8d7698deeac29e *R/rcsn.R
+ec17a9df9bd8bdeaaff4de8e95f5a358 *man/dcsn.Rd
+f2577ebb51c7c53cd3b9e2c4d8ebb8e1 *man/loglcsn.Rd
+f90775c2a2a7cfc115b357b99b372e42 *man/pcsn.Rd
+fd539f5c1133300e07d6f3375f08766f *man/rcsn.Rd
