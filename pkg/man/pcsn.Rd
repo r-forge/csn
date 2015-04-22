@@ -32,13 +32,13 @@ pcsn(x, mu, sigma, gamma, nu, delta)
 }
 }
 \details{
-Function pcsn makes use of pmnorm from package mnormt
+Function pcsn makes use of pmvnorm from package mvtnorm
 }
 \value{
 \code{pcsn} returns a vector of cdf values
 }
 \seealso{
-\code{\link[mnormt]{pmnorm}}
+\code{\link[mvtnorm]{pmvnorm}}
 }
 \examples{
 x1 <- seq(4,6,by = 0.1)
@@ -49,7 +49,7 @@ mu <- c(1,2,3)
 sigma <- matrix(c(2,-1,0,-1,2,-1,0,-1,2),3)
 gamma <- matrix(c(0,1,0,2,2,3),2,3)
 nu <- c(1,3)
-delta <- matrix(c(1,0,1,2),2)
+delta <- matrix(c(1,1,1,2),2)
 pcsn(6,5,9,1,0,0.05)
 pcsn(c(3,4,5),mu,sigma,gamma,nu,delta)
 pcsn(x,mu,sigma,gamma,nu,delta)

@@ -29,10 +29,12 @@ pcsn <- function(x, mu, sigma, gamma, nu, delta){
   a21 <- -gamma%*%sigma
   a22 <- delta+gamma%*%sigma%*%t(gamma)
   sigma1 <- rbind(cbind(a11,a12),cbind(a21,a22))
+  colnames(sigma1) <- NULL
+  rownames(sigma1) <- NULL
   x1 <- cbind(x,matrix(0,nrow(x),length(nu)))
-  C <- (pmnorm(0,nu,delta+gamma%*%sigma%*%t(gamma)))^(-1)
+  C <- (pmvnorm(upper = rep(0,length(nu)),mean = nu,sigma = as.matrix(delta+gamma%*%sigma%*%t(gamma))))^(-1)
   for (i in 1:nrow(x1)){
-    result[i] <- C*pmnorm(x1[i,],mu1,sigma1)
+    result[i] <- C*pmvnorm(upper = x1[i,],mean = mu1,sigma = as.matrix(sigma1))
   }
   return(result)
 }

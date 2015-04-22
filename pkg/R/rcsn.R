@@ -19,13 +19,13 @@ rcsn <- function(k, mu=rep(0, n), sigma, gamma, nu=rep(0, q), delta){
   res <- matrix(0,k,n)
   for (i in 1:k){
    repeat{
-    v <- rmnorm(1,-nu, delta+gamma%*%sigma%*%t(gamma))
+    v <- rmvnorm(1,mean = -nu, sigma= delta+gamma%*%sigma%*%t(gamma))
     if (all(v>=0)) break
   }
   temp <- t(gamma%*%sigma)%*%solve(delta+gamma%*%sigma%*%t(gamma))
   E <- mu+temp%*%t(v+nu)
   Var <- sigma-temp%*%(gamma%*%sigma)
-  t <- rmnorm(1, E, Var)
+  t <- rmvnorm(1, mean = E, sigma = as.matrix(Var))
   res[i,] <- t
   }
   return (res)

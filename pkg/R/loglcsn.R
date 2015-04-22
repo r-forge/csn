@@ -24,9 +24,9 @@ loglcsn <- function(x, mu, sigma, gamma, nu, delta){
   if (is.matrix(delta) && ncol(delta) != length(nu))
     stop("incorrect 'delta'")
   for (i in 1:nrow(x)){
-    f1 <- log(pmnorm(0,nu,delta+gamma%*%sigma%*%t(gamma)))
-    f2 <- log(pmnorm(as.vector(gamma%*%(x[i,]-mu)), nu, delta))
-    f3 <- dmnorm(x[i,], mu, sigma,log=TRUE)
+    f1 <- log(pmvnorm(upper = rep(0,length(nu)),mean = nu,sigma = as.matrix(delta+gamma%*%sigma%*%t(gamma))))
+    f2 <- log(pmvnorm(upper = as.vector(gamma%*%(x[i,]-mu)), mean = nu, sigma = as.matrix(delta)))
+    f3 <- dmvnorm(x = x[i,], mean = mu, sigma = as.matrix(sigma),log=TRUE)
     result[i] <- -f1+f2+f3
   }
     result <- sum(result)

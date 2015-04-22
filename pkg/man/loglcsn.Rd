@@ -32,13 +32,13 @@ loglcsn(x, mu, sigma, gamma, nu, delta)
 }
 }
 \details{
-Function loglcsn makes use of pmnorm and dmnorm from package mnormt
+Function loglcsn makes use of pmvnorm and dmvnorm from package mvtnorm
 }
 \value{
   \code{loglcsn} returns a sum of log-transformed density values
 }
 \seealso{
-\code{\link[mnormt]{pmnorm}}, \code{\link[mnormt]{dmnorm}}
+\code{\link[mvtnorm]{pmvnorm}}, \code{\link[mvtnorm]{dmvnorm}}
 }
 \examples{
 x <- cbind(seq(3,9,length=100),seq(7,13,length=100))

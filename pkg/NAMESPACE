@@ -1,2 +1,2 @@
 exportPattern(".")
-import(mnormt)
+import(mvtnorm)

@@ -32,13 +32,13 @@ dcsn(x, mu, sigma, gamma, nu, delta)
 }
 }
 \details{
-Function dcsn makes use of pmnorm and dmnorm from package mnormt
+Function dcsn makes use of pmvnorm and dmvnorm from package mvtnorm
 }
 \value{
 \code{dcsn} returns a vector of density values
 }
 \seealso{
-\code{\link[mnormt]{pmnorm}}, \code{\link[mnormt]{dmnorm}}
+\code{\link[mvtnorm]{pmvnorm}}, \code{\link[mvtnorm]{dmvnorm}}
 }
 \examples{
 x1 <- seq(4.5,11,length=100)
