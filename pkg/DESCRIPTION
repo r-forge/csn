@@ -9,12 +9,12 @@ Depends: R (>= 2.2.0)
 Imports: mvtnorm
 Description: This package provides functions for computing the density
     and the log-likelihood function of closed-skew normal variates,
-    and for generating random vectors sampled from this distribution.
+    and for generating random vectors sampled from this distribution.\cr
     Gonzalez-Farias, G., Dominguez-Molina, J., and Gupta, A. (2004).
     The closed skew normal distribution, 
     Skew-elliptical distributions and their applications: a journey beyond normality,
     Chapman and Hall/CRC, Boca Raton, FL, pp. 25-42.
 License: GPL-2
-Packaged: 2014-12-21; Dmitry Pavlyuk
+Packaged: 2015-05-03; Dmitry Pavlyuk
 NeedsCompilation: no
 Repository: CRAN
