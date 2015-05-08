@@ -1,13 +1,13 @@
 Package: csn
 Type: Package
 Title: Closed Skew-Normal Distribution
-Version: 1.1.2
-Date: 2015-04-22
+Version: 1.1.3
+Date: 2015-05-08
 Author: Dmitry Pavlyuk, Eugene Girtcius
 Maintainer: Dmitry Pavlyuk <Dmitry.V.Pavlyuk@gmail.com>
 Depends: R (>= 2.2.0)
 Imports: mvtnorm
-Description: This package provides functions for computing the density
+Description: Provides functions for computing the density
     and the log-likelihood function of closed-skew normal variates,
     and for generating random vectors sampled from this distribution.\cr
     Gonzalez-Farias, G., Dominguez-Molina, J., and Gupta, A. (2004).
